@@ -1,5 +1,5 @@
 {
-  "name": "skye",
+  "name": "spring",
   "version": "1.0.0",
   "description": "A one-page, two-column Jekyll theme that pairs beautifully styled content with contextual media.",
   "main": "index.html",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/connor-baer/skye.git"
+    "url": "git+https://github.com/connor-baer/spring.git"
   },
   "keywords": [
     "connor",
@@ -18,14 +18,14 @@
     "code",
     "jekyll",
     "developer",
-    "skye"
+    "spring"
   ],
   "author": "Connor Bär",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/connor-baer/skye/issues"
+    "url": "https://github.com/connor-baer/spring/issues"
   },
-  "homepage": "http://skye.connorbaer.io",
+  "homepage": "http://spring.connorbaer.io",
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
