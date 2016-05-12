@@ -1,0 +1,67 @@
+---
+# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+# only main files contain this front matter, not partials.
+---
+
+//
+// 888d888 .d88b. 888  888  888 8888b. 88888b.  
+// 888P"  d88""88b888  888  888    "88b888 "88b 
+// 888    888  888888  888  888.d888888888  888 
+// 888    Y88..88PY88b 888 d88P888  888888  888 
+// 888     "Y88P"  "Y8888888P" "Y888888888  888 
+//
+// Designed, built, and released under MIT license by @connor_baer.
+
+// Variables
+/* 
+* colors
+* typography
+* breakpoints
+*/
+
+/* Colors */
+$primary: {{site.color.primary}};
+$primary-darker: #0EBE75;
+$primary-lighter: #2EEF9F;
+$primary-lighterer: #54F2B0;
+
+$gray-5: #EBEBEB;
+$gray-70: #5B5B5B;
+$gray-80: #333333;
+$gray-90: #141414;
+
+/* These colors control individual parts of the website. For convenience some are linked to the main colors above, but feel free to adjust them independently. */
+$body-color: $gray-90;
+$link-color: $primary;
+$border-color: $gray-5;
+$code-color: #bf616a;
+
+
+/* Typography */
+
+$sans-serif: 'sofia-pro', 'Sofia Pro', 'Montserrat', 'PT Sans', Helvetica, sans-serif;
+$serif: 'Calluna', 'Merriweather', Georgia, serif;
+$code: 'Courier New', Courier, monospace;
+
+$normal: 400;
+$bold: 700;
+
+
+/* Breakpoints */
+$phone: 36em; /*576*/
+$tablet: 48em; /*768px*/
+$desktop: 64em; /*1024px*/
+
+
+// Imports
+@import "normalize";
+@import "base";
+@import "layout";
+@import "type";
+@import "social";
+@import "header";
+@import "navigation";
+@import "content";
+@import "cards";
+@import "form";
+@import "footer";

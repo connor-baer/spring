@@ -1,0 +1,93 @@
+// Typography
+/* Headings, body text, lists, and other misc typographic elements. */
+
+h1, h2, h3, h4, h5, a {
+  color: $primary;
+}
+
+/*.invert {
+  background-color: $primary;
+}
+
+.invert h1, .invert h2, .invert h3, .invert h4, .invert h5, .invert a {
+  color: #fff;
+}*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  font-weight: $bold;
+  margin-top: 0;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+  font-family: $sans-serif;
+}
+
+h1 {
+  font-size: 3.764rem;
+}
+
+h2 {
+  font-size: 3.011rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.606rem;
+}
+
+h4 {
+  font-size: 2.085rem;
+}
+
+h5 {
+  font-size: 1.805rem;
+}
+
+h6 {
+  font-size: 1.444rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: $serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.link {
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    color: #000;
+  }
+
+  strong {
+    color: inherit;
+  }
+}
+
+/*.invert a.link {
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    color: $primary;
+  }
+}*/
+
+strong, .strong {
+  font-weight: $bold;
+}
+
+.unstyle {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.unstyle li {
+  display: inline-block;
+  margin-left: 0;
+}

@@ -1,0 +1,50 @@
+.social {
+	padding-top: 1.5rem;
+	height: 6rem;
+	background-color: $gray-90;
+}
+
+.social-logo {
+	float: left;
+}
+
+.social-bear {
+	width: 3rem;
+	height: 3rem;
+}
+
+.social-links {
+	float: right;
+	padding: 0.25rem 0;
+}
+
+.social-icon {
+	height: 2.1rem;
+	width: 2.1rem;
+	padding: 0.45rem;
+	fill: #fff;
+	margin-left: 1.5rem;
+}
+
+.social-bear, .social-icon {
+	transition: transform 0.15s ease-in-out;
+	&:hover, &:focus {
+		-webkit-transform: scale(1.25);
+	    -moz-transform: scale(1.25);
+	    transform: scale(1.25);
+	}
+}
+
+@media (max-width: $phone) {
+	.social {
+		height: 6.4rem;
+	}
+	.social-bear {
+		width: 3.4rem;
+		height: 3.4rem;
+	}
+	.social-icon {
+		height: 2.5rem;
+		width: 2.5rem;
+	}
+}

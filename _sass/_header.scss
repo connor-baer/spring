@@ -1,0 +1,23 @@
+header {
+	background-color: $gray-90;
+}
+
+.header-text {
+	width: 100%;
+	padding: 6rem 2rem 7rem 2rem;
+	margin: 0 auto;
+	display: block;
+	height: 28%;
+}
+
+@media (min-width: $phone) {
+	.header-text {
+		width: 80%;
+	}
+}
+
+.header-content {
+	padding-top: 3rem;
+	padding-bottom: 4rem;
+	color: #fff; 
+}

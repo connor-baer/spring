@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+<body>
+	<div class="body-wrapper">
+		<header>
+	    	{% include social.html %}
+
+	    	<article class="header-content ctnr-golden">
+		        <h1>{{ page.title }}</h1>
+		        <h6>{{ page.description }}</h6>
+	    	</article>
+	    </header>
+
+		{{ content }}
+
+<!-- 		<footer id="footer" class="invert">
+			<div class="footer-content ctnr-golden">
+				<h6>*dig·it·al no·mad <span class="footer-phonetic"> /ˈdijidl  ˈnōˌmad/</span></h6>
+				<p class="footer-definition">Digital nomads are people who are location independent and use technology to perform their job. Digital nomad lifestyle is becoming more common every day and reflects the modern technology of our time. <a class="link strong" href=" https://www.wikiwand.com/en/Digital_nomad">Learn more →</a>
+				<p class="footer-legal">&copy; {{ site.time | date: '%Y' }} Connor Bär. All rights reserved.</p>
+			</div>
+		</footer> -->
+
+	    {% include analytics.html %}
+    </div>
+</body>
+</html>

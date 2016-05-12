@@ -1,0 +1,35 @@
+{
+  "name": "skye",
+  "version": "1.0.0",
+  "description": "A one-page, two-column Jekyll theme that pairs beautifully styled content with contextual media.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connor-baer/skye.git"
+  },
+  "keywords": [
+    "connor",
+    "bär",
+    "designer",
+    "traveller",
+    "code",
+    "jekyll",
+    "developer",
+    "skye"
+  ],
+  "author": "Connor Bär",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/connor-baer/skye/issues"
+  },
+  "homepage": "http://skye.connorbaer.io",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.5.2",
+    "gulp-watch": "^4.3.5"
+  }
+}

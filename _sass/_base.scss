@@ -1,0 +1,42 @@
+// Body resets
+//
+// Update the foundational and global aspects of the page.
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: $normal;
+}
+@media (max-width: $phone) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  color: $body-color;
+  background-color: $primary;
+}
+
+.body-wrapper {
+  background-color: $gray-5;
+  min-height: 100vh;
+  min-width: 100vw;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+::-moz-selection {
+    color: white;
+    background: $gray-90;
+}
+::selection {
+    color: white; 
+    background: $gray-90;
+}

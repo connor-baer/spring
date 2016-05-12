@@ -1,0 +1,14 @@
+<nav class="navigation">
+	<div class="ctnr-wide">
+	    <ul class="unstyle navigation-links">
+	        {% assign pages_list = site.pages | sort:"order" %}
+	        {% for node in pages_list %}
+	          {% if node.menu != null %}
+	            {% if node.layout != "default" %}
+	              <li><a class="navigation-item link" id="{% if page.url == node.url %}active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.menu }}</a></li>
+	            {% endif %}
+	          {% endif %}
+	        {% endfor %}
+	    </ul>
+	</div>
+</nav>
