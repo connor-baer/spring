@@ -1,6 +1,6 @@
 .social {
 	padding-top: 1.5rem;
-	height: 5rem;
+	height: 5.5rem;
 	background-color: #fff;
 }
 
@@ -8,24 +8,18 @@
 	float: left;
 }
 
-.social-print {
-	width: 2rem;
-	height: 2rem;
-}
-
 .social-links {
 	float: right;
-	padding: 0.25rem 0;
 }
 
 .social-icon {
-	height: 1.6rem;
-	width: 1.6rem;
-	padding: 0.2rem;
+	padding: 0.6rem;
 	margin-left: 1.5rem;
 }
 
 .social-print, .social-icon {
+	width: 2.5rem;
+	height: 2.5rem;
 	transition: transform 0.15s ease-in-out, fill 0.15s ease-in-out;
 	fill: $gray-70;
 	&:hover, &:focus {

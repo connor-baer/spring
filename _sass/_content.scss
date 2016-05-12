@@ -1,20 +1,4 @@
 article.content {
-	background-color: #fff;
 	padding-top: 1.5rem;
 	padding-bottom: 3rem;
-}
-
-@media (min-width: $phone) {
-	.ctnr-wide {
-		width: 100%;
-		padding-right: 2rem;
-		padding-left: 2rem;
-	}
-
-	.ctnr-golden {
-		max-width: 56rem;
-		width: 61.8%;
-		min-width: 20rem;
-		margin: 0 auto;
-	}
 }

@@ -6,24 +6,26 @@
 <body>
 	<div class="site-wrapper">
 		<div class="body-wrapper">
-			<header>
+			<header class="header">
 		    	{% include social.html %}
 
-		    	<div class="header-content ctnr-wide">
-			        <img class="header-text" src="{{ site.baseurl }}/assets/text.png" srcset="{{ site.baseurl }}/assets/@0.5x.png 500w, {{ site.baseurl }}/assets/text@3x.png 1500w, {{ site.baseurl }}/assets/text@3x.png 500w 2x" alt="Hi, I'm Connor, Designer & Developer">
-			        <h6>{{ site.description }}</h6>
+		    	<div class="ctnr-golden">
+		    		<div class="header-content">
+				        <h1>It's spring!</h1>
+				        <h5>{{ site.description }}</h5>
+			        </div>
 		    	</div>
 		    </header>
 
 			{{ content }}
 
-	<!-- 		<footer id="footer" class="invert">
-				<div class="footer-content ctnr-golden">
+			<footer id="footer"
+				<div class="footer-content ctnr-wide">
 					<h6>*dig·it·al no·mad <span class="footer-phonetic"> /ˈdijidl  ˈnōˌmad/</span></h6>
 					<p class="footer-definition">Digital nomads are people who are location independent and use technology to perform their job. Digital nomad lifestyle is becoming more common every day and reflects the modern technology of our time. <a class="link strong" href=" https://www.wikiwand.com/en/Digital_nomad">Learn more →</a>
 					<p class="footer-legal">&copy; {{ site.time | date: '%Y' }} Connor Bär. All rights reserved.</p>
 				</div>
-			</footer> -->
+			</footer>
 
 		    {% include analytics.html %}
 		</div>
