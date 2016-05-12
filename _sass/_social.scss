@@ -29,3 +29,25 @@
 	    fill: $primary;
 	}
 }
+
+.headroom {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999999;
+  transition: transform 0.2s ease-in-out;
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
+@media (min-width: $tablet) {
+	.headroom {
+		max-width: 50vw;
+	}
+}

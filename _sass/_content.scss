@@ -4,12 +4,14 @@ article.content {
 }
 
 .post-image {
-	height: 50%;
+	height: 30%;
 	width: 100%;
 	object-fit: cover;
+	position: absolute;
+	left: 0;
 }
 
-@media (min-width: $phone) {
+@media (min-width: $tablet) {
 	.post-image {
 		position: fixed;
 		height: 100vh;

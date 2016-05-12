@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New Portfolio, New Projects
-image: /img/post1.jpg
+image: spring
 ---
 
 <span class="caps" alt="W">elcome</span>, sweet season of delight, /

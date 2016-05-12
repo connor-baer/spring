@@ -4,7 +4,7 @@
 h2, h3, h4, h5 {
   color: $primary;
   margin-bottom: 0.5rem;
-  font-weight: $normal;
+  font-weight: $bold;
   margin-top: 0;
   line-height: 1.1;
   font-family: $sans-serif;
@@ -45,7 +45,6 @@ h6 {
   text-align: center;
   color: $gray-70;
   line-height: 1.5;
-  /*font-weight: $bold;*/
   font-family: $serif;
   font-style: italic;
   margin-top: 1rem;

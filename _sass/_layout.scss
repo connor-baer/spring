@@ -15,11 +15,13 @@
 
 .ctnr-wide, .ctnr-golden {
 	width: 100%;
+	max-width: 50rem;
 	padding-right: 2rem;
 	padding-left: 2rem;
+	margin: 0 auto;
 }
 
-@media (min-width: $phone) {
+@media (min-width: $tablet) {
 	.body-wrapper {
 		width: 50vw;
 	}
@@ -34,6 +36,5 @@
 		max-width: 56rem;
 		width: 61.8%;
 		min-width: 20rem;
-		margin: 0 auto;
 	}
 }
