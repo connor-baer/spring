@@ -1,11 +1,8 @@
 // Typography
 /* Headings, body text, lists, and other misc typographic elements. */
 
-h1, h2, h3, h4, h5, a {
+h2, h3, h4, h5 {
   color: $primary;
-}
-
-h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
   font-weight: $normal;
   margin-top: 0;
@@ -14,11 +11,11 @@ h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  color: $primary;
   font-size: 3.764rem;
   font-family: $ornamental;
   font-weight: normal;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   line-height: 1.25;
   text-align: center;
 }
@@ -43,6 +40,18 @@ h5 {
   font-weight: $bold;
 }
 
+h6 {
+  font-size: 1rem;
+  text-align: center;
+  color: $gray-70;
+  line-height: 1.5;
+  /*font-weight: $bold;*/
+  font-family: $serif;
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -64,6 +73,7 @@ p {
 
 a {
   text-decoration: none;
+  color: $primary;
 }
 
 a.link {

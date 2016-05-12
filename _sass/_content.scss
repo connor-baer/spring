@@ -2,3 +2,44 @@ article.content {
 	padding-top: 1.5rem;
 	padding-bottom: 3rem;
 }
+
+.post-image {
+	height: 50%;
+	width: 100%;
+	object-fit: cover;
+}
+
+@media (min-width: $phone) {
+	.post-image {
+		position: fixed;
+		height: 100vh;
+		width: 50vw;
+		left: 50vw;
+		top: 0;
+		object-fit: cover;
+	}
+}
+
+
+// Typography
+
+blockquote {
+	color: $primary;
+	padding: 2rem 0;
+	margin: 0;
+}
+
+blockquote > p {
+	font-size: 1.805rem;
+	text-align: center;
+	line-height: 1.5;
+	&:before {
+		content: open-quote;
+		display: inline;
+	}
+	&:after {
+		content: close-quote;
+		display: inline;
+	}
+
+}
