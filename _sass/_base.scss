@@ -24,14 +24,6 @@ body {
   background-color: $primary;
 }
 
-.body-wrapper {
-  background-color: $gray-5;
-  min-height: 100vh;
-  min-width: 100vw;
-  max-width: 90rem;
-  margin: 0 auto;
-}
-
 ::-moz-selection {
     color: white;
     background: $gray-90;

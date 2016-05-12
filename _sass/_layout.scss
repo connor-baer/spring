@@ -1,3 +1,18 @@
+.site-wrapper {
+	background-color: $gray-5;
+	min-height: 100vh;
+	min-width: 100vw;
+	max-width: 90rem;
+	margin: 0 auto;
+}
+
+.body-wrapper {
+	background-color: #fff;
+	min-height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+
 .ctnr-wide, .ctnr-golden {
 	width: 100%;
 	padding-right: 2rem;
@@ -5,6 +20,10 @@
 }
 
 @media (min-width: $phone) {
+	.body-wrapper {
+		width: 50vw;
+	}
+
 	.ctnr-wide {
 		width: 100%;
 		padding-right: 2rem;

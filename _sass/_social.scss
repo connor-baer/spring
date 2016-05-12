@@ -1,16 +1,16 @@
 .social {
 	padding-top: 1.5rem;
-	height: 6rem;
-	background-color: $gray-90;
+	height: 5rem;
+	background-color: #fff;
 }
 
 .social-logo {
 	float: left;
 }
 
-.social-bear {
-	width: 3rem;
-	height: 3rem;
+.social-print {
+	width: 2rem;
+	height: 2rem;
 }
 
 .social-links {
@@ -19,32 +19,19 @@
 }
 
 .social-icon {
-	height: 2.1rem;
-	width: 2.1rem;
-	padding: 0.45rem;
-	fill: #fff;
+	height: 1.6rem;
+	width: 1.6rem;
+	padding: 0.2rem;
 	margin-left: 1.5rem;
 }
 
-.social-bear, .social-icon {
-	transition: transform 0.15s ease-in-out;
+.social-print, .social-icon {
+	transition: transform 0.15s ease-in-out, fill 0.15s ease-in-out;
+	fill: $gray-70;
 	&:hover, &:focus {
 		-webkit-transform: scale(1.25);
 	    -moz-transform: scale(1.25);
 	    transform: scale(1.25);
-	}
-}
-
-@media (max-width: $phone) {
-	.social {
-		height: 6.4rem;
-	}
-	.social-bear {
-		width: 3.4rem;
-		height: 3.4rem;
-	}
-	.social-icon {
-		height: 2.5rem;
-		width: 2.5rem;
+	    fill: $primary;
 	}
 }

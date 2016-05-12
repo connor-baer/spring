@@ -1,11 +1,9 @@
 ---
-layout: home
-title: Projects
-menu: Projects
-order: 1
+layout: default
+title: Home
 ---
 
-<div class="posts">
+<article class="posts">
   {% for post in site.posts %}
   <div class="post">
     <a name="{{ post.title | downcase | url_encode }}"><h1 class="post-title">
@@ -17,4 +15,4 @@ order: 1
     {{ post.content }}
   </div></a>
   {% endfor %}
-</div>
+</article>
