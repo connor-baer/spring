@@ -12,7 +12,7 @@ h2, h3, h4, h5 {
 
 h1 {
   color: $primary;
-  font-size: 3.764rem;
+  font-size: 4rem;
   font-family: $ornamental;
   font-weight: normal;
   margin-bottom: 1.25rem;
@@ -63,9 +63,9 @@ p {
 .caps:before { 
   float: left; 
   color: $primary; 
-  font-size: 4.1rem; 
+  font-size: 4.4rem; 
   line-height: 1; 
-  padding: 0.25rem 0.5rem 0 0.25rem; 
+  padding: 0 0.5rem 0 0.25rem; 
   font-family: $serif;
   content: attr(alt);
 }

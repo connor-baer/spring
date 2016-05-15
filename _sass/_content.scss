@@ -1,24 +1,46 @@
-article.content {
-	padding-top: 1.5rem;
-	padding-bottom: 3rem;
+.post {
+	padding-bottom: 4rem;
+	padding-top: 5rem;
+	position: relative;
+	border-bottom: 1px solid $gray-5;
+	height: 100%;
 }
 
 .post-image {
-	height: 30%;
+	height: 61.8vw;
 	width: 100%;
 	object-fit: cover;
-	position: absolute;
-	left: 0;
+	margin-bottom: 1rem;
 }
 
 @media (min-width: $tablet) {
+	.post {
+		&.-fixed .post-image {
+			position: fixed;
+			bottom: 0;
+		}
+		&.-absolute-top .post-image {
+			position: absolute;
+			top: 0;
+		}
+		&.-absolute-bottom .post-image {
+			position: absolute;
+			bottom: 0;
+		}
+		&.-first .post-image {
+			height: 100vh;
+		}
+		&.-last .post-image {
+			height: 100vh;
+		}
+	}
+
 	.post-image {
-		position: fixed;
-		height: 100vh;
+		max-height: 100vh;
+		height: inherit;
 		width: 50vw;
 		left: 50vw;
-		top: 0;
-		object-fit: cover;
+		margin-bottom: 0;
 	}
 }
 

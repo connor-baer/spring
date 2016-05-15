@@ -3,5 +3,11 @@
 }
 
 .header-content {
-	margin: 10rem 0 5rem;
+	padding: 8rem 0 4rem;
+}
+
+@media (min-width: $tablet) {
+	.header-content {
+		padding: 10rem 0 6rem;
+	}
 }

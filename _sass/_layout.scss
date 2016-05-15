@@ -4,13 +4,14 @@
 	min-width: 100vw;
 	max-width: 90rem;
 	margin: 0 auto;
+	z-index: 1;
 }
 
 .body-wrapper {
 	background-color: #fff;
 	min-height: 100vh;
 	width: 100vw;
-	overflow: hidden;
+	z-index: 2;
 }
 
 .ctnr-wide, .ctnr-golden {
@@ -28,8 +29,8 @@
 
 	.ctnr-wide {
 		width: 100%;
-		padding-right: 4rem;
-		padding-left: 4rem;
+		padding-right: 5rem;
+		padding-left: 5rem;
 	}
 
 	.ctnr-golden {

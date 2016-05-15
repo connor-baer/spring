@@ -3,33 +3,29 @@
 
   {% include head.html %}
 
-<body>
-	<div class="site-wrapper">
-		<div class="body-wrapper">
-			<header class="header">
-		    	{% include social.html %}
-
-		    	<div class="ctnr-golden">
-		    		<div class="header-content">
-				        <h1>It's spring!</h1>
-				        <h5>{{ site.description }}</h5>
-				        <h6>by <a href="{{ site.author.url }}">{{ site.author.name }}</a></h6>
-			        </div>
-		    	</div>
-		    </header>
-
-			{{ content }}
-
-			<footer class="ctnr-wide">
-				<div class="footer-content">
+	<body>
+		<div class="site-wrapper">
+			<div class="body-wrapper">
+				<header class="header">
+			    	{% include social.html %}
+			    	<div class="ctnr-golden">
+			    		<div class="header-content">
+					        <h1>It's spring!</h1>
+					        <h5>{{ site.description }}</h5>
+					        <h6>by <a href="{{ site.author.url }}">{{ site.author.name }}</a></h6>
+				        </div>
+			    	</div>
+			    </header>
+				{{ content }}
+			</div>
+<!-- 			<footer class="footer">
+				<div class="footer-content ctnr-wide">
 					<h4>Connor Bär</h4>
 					<p class="footer-definition">I am a digital nomad currently living in Germany. I am a perfectionist - focused on uniting simplicity, form and function in a modern web experience. <a class="link strong" href=" https://www.wikiwand.com/en/Digital_nomad">Learn more →</a>
 					<p class="footer-legal">&copy; {{ site.time | date: '%Y' }} Connor Bär. All rights reserved.</p>
 				</div>
-			</footer>
-
+			</footer> -->
 		    {% include analytics.html %}
-		</div>
-    </div>
-</body>
+	    </div>
+	</body>
 </html>

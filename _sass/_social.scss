@@ -2,6 +2,9 @@
 	padding-top: 1.5rem;
 	height: 5.5rem;
 	background-color: #fff;
+	width: 100%;
+	padding-right: 2rem;
+	padding-left: 2rem;
 }
 
 .social-logo {
@@ -35,7 +38,7 @@
   left: 0;
   top: 0;
   z-index: 99999999;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .headroom--pinned {
@@ -49,5 +52,11 @@
 @media (min-width: $tablet) {
 	.headroom {
 		max-width: 50vw;
+	}
+
+	.social {
+		width: 100%;
+		padding-right: 2rem;
+		padding-left: 2rem;
 	}
 }

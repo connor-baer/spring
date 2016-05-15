@@ -29,6 +29,7 @@ description:          'A one-page, two-column Jekyll theme that pairs beautifull
 url:                  http://spring.connorbaer.io
 baseurl:              ''
 logo:                 /assets/apple-icon-144x144.png
+image:                spring
 twitter:
   username:           connor_baer
 facebook:

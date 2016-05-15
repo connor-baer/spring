@@ -1,23 +1,14 @@
+.footer {
+	background-color: $gray-90;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	color: #fff;
+}
+
 .footer-content {
-	padding-top: 1.5rem;
-	padding-bottom: 1rem;
-	border-top: 2px solid $primary;
-}
 
-.footer-phonetic {
-	font-family: $sans-serif;
-	font-size: 0.866rem;
-	color: $gray-70;
-}
-
-.footer-definition {
-	font-family: $sans-serif;
 }
 
 .footer-legal {
-	margin-top: 1.75rem;
-	padding-top: 0.75rem;
-	font-family: $sans-serif;
-	font-size: 0.866rem;
-	color: $gray-70;
+	margin-bottom: 0;
 }
