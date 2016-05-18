@@ -1,14 +1,12 @@
-<nav class="navigation">
-	<div class="ctnr-wide">
-	    <ul class="unstyle navigation-links">
-	        {% assign pages_list = site.pages | sort:"order" %}
-	        {% for node in pages_list %}
-	          {% if node.menu != null %}
-	            {% if node.layout != "default" %}
-	              <li><a class="navigation-item link" id="{% if page.url == node.url %}active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.menu }}</a></li>
-	            {% endif %}
-	          {% endif %}
-	        {% endfor %}
-	    </ul>
-	</div>
-</nav>
+<div class="navigation">
+    <ul class="unstyle navigation-links">
+		{% for post in site.posts %}
+            <li class="navigation-item"><a data-scroll href="{{ site.baseurl }}{{ site.url }}/#{{ post.title | downcase | replace: ' ', '-' | remove: '.'| url_encode }}">{{ post.title }}</a></li>
+
+            <span id="{% if page.url == node.url %}active{% endif %}"></span>
+        {% endfor %}
+    </ul>
+</div>
+
+
+    

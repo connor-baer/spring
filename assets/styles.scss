@@ -27,14 +27,14 @@
 
 /* Colors */
 $primary: {{site.color.primary}};
-$primary-darker: #0EBE75;
-$primary-lighter: #2EEF9F;
-$primary-lighterer: #54F2B0;
+$primary-darker: {{site.color.primary-darker}};
+$primary-lighter: {{site.color.primary-lighter}};
+$primary-lighterer: {{site.color.primary-lighterer}};
 
-$gray-5: #EBEBEB;
-$gray-70: #5B5B5B;
-$gray-80: #333333;
-$gray-90: #141414;
+$gray-5: #CCCCCC;
+$gray-70: #707070;
+$gray-80: #444444;
+$gray-90: #1F1F1F;
 
 /* These colors control individual parts of the website. For convenience some are linked to the main colors above, but feel free to adjust them independently. */
 $body-color: $gray-90;
@@ -44,7 +44,6 @@ $code-color: #bf616a;
 
 
 /* Typography */
-
 
 /*!
 Font: 		Last Paradise
@@ -75,12 +74,13 @@ License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
 }
 
 $ornamental: 'LastParadise', Georgia, serif;
-$sans-serif: 'sofia-pro', 'Sofia Pro', 'Montserrat', 'PT Sans', Helvetica, sans-serif;
+$sans: 'freight-sans-pro', 'Freight Sans Pro', 'PT Sans', Arial, sans-serif;
+$sans-normal: 500;
+$serif-normal: 400;
 $serif: 'calluna', 'Calluna', 'Merriweather', Georgia, serif;
+$sans-bold: 700;
+$serif-bold: 700;
 $code: 'Courier New', Courier, monospace;
-
-$normal: 400;
-$bold: 700;
 
 
 /* Breakpoints */
@@ -97,5 +97,7 @@ $desktop: 64em; /*1024px*/
 @import "social";
 @import "header";
 @import "content";
-/*@import "form";*/
+@import "navigation";
+@import "form";
 @import "footer";
+/*@import "overrides";*/

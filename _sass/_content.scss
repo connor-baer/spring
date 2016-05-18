@@ -6,6 +6,11 @@
 	height: 100%;
 }
 
+.post-title {
+	margin-top: 4rem;
+	margin-bottom: 2rem;
+}
+
 .post-image {
 	height: 61.8vw;
 	width: 100%;
@@ -43,6 +48,36 @@
 
 
 // Typography
+
+.post a, a.link {
+  position: relative;
+  display: inline-block;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $primary;
+    visibility: hidden;
+    transform: translate(0px,3px);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  &:hover {
+  	color: $primary;
+  }
+  &:hover:before,
+  &:hover:focus {
+  	visibility: visible;
+    opacity: 1;
+    transform: translate(0px,0);
+  }
+  strong {
+    color: inherit;
+  }
+}
 
 blockquote {
 	color: $primary;

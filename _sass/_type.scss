@@ -1,43 +1,39 @@
 // Typography
 /* Headings, body text, lists, and other misc typographic elements. */
 
-h2, h3, h4, h5 {
-  color: $primary;
+h1, h2, h3, h4, h5 {
   margin-bottom: 0.5rem;
-  font-weight: $bold;
-  margin-top: 0;
+  font-weight: $sans-bold;
+  margin-top: 1rem;
   line-height: 1.1;
-  font-family: $sans-serif;
+  font-family: $sans;
 }
 
 h1 {
+  font-size: 2.606rem;
   color: $primary;
-  font-size: 4rem;
-  font-family: $ornamental;
-  font-weight: normal;
-  margin-bottom: 1.25rem;
-  line-height: 1.25;
-  text-align: center;
 }
 
 h2 {
   font-size: 2.085rem;
+  color: $primary;
 }
 
 h3 {
   font-size: 1.805rem;
+  color: $gray-80;
 }
 
 h4 {
   font-size: 1.444rem;
+  color: $gray-80;
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   text-align: center;
-  color: $gray-70;
+  color: $gray-80;
   line-height: 1.5;
-  font-weight: $bold;
 }
 
 h6 {
@@ -48,7 +44,8 @@ h6 {
   font-family: $serif;
   font-style: italic;
   margin-top: 1rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
+  font-weight: $serif-bold;
 }
 
 p {
@@ -58,6 +55,7 @@ p {
   font-size: 1.25rem;
   line-height: 1.75;
   letter-spacing: -0.003em;
+  font-weight: $serif-normal;
 }
 
 .caps:before { 
@@ -75,21 +73,8 @@ a {
   color: $primary;
 }
 
-a.link {
-  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
-  &:hover,
-  &:focus {
-    background-color: $primary;
-    color: #000;
-  }
-
-  strong {
-    color: inherit;
-  }
-}
-
 strong, .strong {
-  font-weight: $bold;
+  font-weight: $sans-bold;
 }
 
 .unstyle {
@@ -98,6 +83,5 @@ strong, .strong {
   margin: 0;
 }
 .unstyle li {
-  display: inline-block;
   margin-left: 0;
 }

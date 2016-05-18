@@ -1,14 +1,14 @@
 label {
 	display: block;
 	margin-top: 1.25em;
-	font-family: $sans-serif;
+	font-family: $sans;
 }
 
 input, textarea {
 	padding: 0.4em 0.8em;
 	border: 1px solid $gray-70;
 	background-color: $gray-5;
-	font-family: $sans-serif;
+	font-family: $sans;
 	line-height: 1.5em;
 	outline: none;
 	margin: 0.3em 0;
@@ -27,13 +27,12 @@ textarea {
 	resize: vertical;
 }
 
-button {
+input[type="submit"], button {
 	display: block;
-	margin-top: 2em;
 	outline: none;
 	font-size: 0.83em;
-	font-family: $sans-serif;
-	font-weight: $bold;
+	font-family: $sans;
+	font-weight: $sans-bold;
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 0.1em;
@@ -42,10 +41,11 @@ button {
 	color: $gray-80;
 	background-color: #fff;
 	transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
-}
-
-button:hover, button:focus, button:active {
-	color: #fff;
-	background-color: $primary;
-	cursor: pointer;
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+		background-color: $primary;
+		cursor: pointer;
+	}
 }

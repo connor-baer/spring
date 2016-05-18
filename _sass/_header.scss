@@ -1,13 +1,22 @@
-.header {
+header {
 	background-color: #fff;
 }
 
 .header-content {
-	padding: 8rem 0 4rem;
+	padding: 9rem 0 1rem;
+}
+
+.header-title {
+  font-size: 5rem;
+  font-family: $ornamental;
+  font-weight: normal;
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+  text-align: center;
 }
 
 @media (min-width: $tablet) {
 	.header-content {
-		padding: 10rem 0 6rem;
+		padding: 11rem 0 3rem;
 	}
 }

@@ -1,0 +1,88 @@
+.navigation {
+    position: fixed;
+    user-select: none;
+    backface-visibility: hidden;
+    top: 0;
+    bottom: 0;
+    left: 26px;
+    z-index: 50;
+    width: 15px;
+    margin: auto;
+    margin-right: 46px;
+    display: table;
+    height: 100%;
+}
+
+.navigation-links {
+    list-style: none;
+    display: table-cell;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.navigation-item {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    margin: 12px 0;
+    &:nth-child(1) {
+        animation: animatein 300ms cubic-bezier(0.35,0.26,0.2,1) 80ms backwards;
+    }
+    & a {
+        opacity: 0;
+        white-space: nowrap;
+        transform: translate3d(-5px,0px,0px);
+        transition: opacity 150ms ease-out;
+        transition: transform 150ms ease-out,opacity 150ms ease-out;
+        transition: transform 150ms ease-out,opacity 150ms ease-out;
+        background: transparent;
+        text-rendering: optimizeLegibility;
+        position: absolute;
+        text-align: right;
+        top: 0;
+        left: -6px;
+        text-transform: capitalize;
+        font-size: 0.9em;
+        line-height: 0.8em;
+        color: #fff;
+        background: $primary;
+        padding: 6px 15px;
+        padding-left: 28px;
+        margin-top: -4px;
+        border-radius: 20px;
+    }
+    &:hover a {   
+        opacity: 1;
+        transform: translate3d(0px,0px,0px);
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 7.5px;
+        height: 7.5px;
+        border-radius: 50%;
+        border: 2px solid #C7C4C4;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        transition: all 150ms ease-out;
+    }
+    &:hover:after {
+        background: transparent;
+        border-color: #fff;
+    }
+}
+
+
+
+#pagination li.rm span {
+    opacity: 0;
+    transform: translate3d(-5px,0px,0px);
+}
+#pagination li.active span {
+    opacity: 1;
+    transform: translate3d(0px,0px,0px);
+}

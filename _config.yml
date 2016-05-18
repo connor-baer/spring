@@ -15,21 +15,24 @@ gems:
 # Settings
 color:                
   primary:            '#11DD88'
+  primary-darker:     '#0EBE75'
+  primary-lighter:    '#2EEF9F'
+  primary-lighterer:  '#54F2B0'
 exclude:              [CNAME, README.md, NOTES.md, .gitignore, js, sass, .gulpfile, node_modules]
 sass:
   sass_dir:           _sass
   style:              compressed
+permalink:            /:title/
 
 
 # Site meta
-title:                Spring
+title:                It's spring!
 tagline:              'A one-page, two-column Jekyll theme.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, wordpress, craft, cms, squarespace, for hire, spring'
 description:          'A one-page, two-column Jekyll theme that pairs beautifully styled content with contextual media.'
 url:                  http://spring.connorbaer.io
 baseurl:              ''
 logo:                 /assets/apple-icon-144x144.png
-image:                spring
 twitter:
   username:           connor_baer
 facebook:
@@ -53,7 +56,7 @@ social:
     - https://medium.com/@connor_baer
     - https://www.snapchat.com/add/connor_baer
 
-## Allows you to add external links to the navigation. Remove, add and re-arrange to your convenience.
+## Outputs the social links in the navigation. Re-arrange to change order.
 nav_items:
   Medium:             https://medium.com/@connor_baer
   Twitter:            https://twitter.com/connor_baer

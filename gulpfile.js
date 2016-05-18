@@ -1,7 +1,11 @@
 // Include plugins
 var gulp = require('gulp'),
 	shell = require('gulp-shell'),
-	browserSync = require('browser-sync').create();
+	browserSync = require('browser-sync').create(),
+	jshint = require('gulp-jshint'),
+  plumber = require('gulp-plumber'),
+	rename = require('gulp-rename'),
+	uglify = require('gulp-uglify');
 
 // Task for building blog when something changed:
 gulp.task('build', shell.task(['jekyll build --watch']));
@@ -13,4 +17,13 @@ gulp.task('serve', function () {
     gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['build', 'serve']);
+gulp.task('default', ['scripts', 'build', 'serve']);
+
+
+gulp.task('scripts', function () {
+  return gulp.src('assets/scripts.js')
+  .pipe(plumber())
+  .pipe(uglify())
+  .pipe(rename("scripts.min.js"))
+  .pipe(gulp.dest('assets'))
+});
