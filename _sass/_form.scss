@@ -27,16 +27,17 @@ textarea {
 	resize: vertical;
 }
 
-input[type="submit"], button {
+input[type="submit"].button, 
+button.button {
 	display: block;
 	outline: none;
-	font-size: 0.83em;
+	font-size: 0.83rem;
 	font-family: $sans;
 	font-weight: $sans-bold;
 	text-transform: uppercase;
 	text-decoration: none;
-	letter-spacing: 0.1em;
-	padding: 0.75em 1.75em;
+	letter-spacing: 0.1rem;
+	padding: 0.75rem 1.75rem;
 	border: 3px solid $primary;
 	color: $gray-80;
 	background-color: #fff;
@@ -48,4 +49,20 @@ input[type="submit"], button {
 		background-color: $primary;
 		cursor: pointer;
 	}
+}
+
+input[type="submit"].button-text, 
+button.button-text, 
+a.button-text {
+	display: block;
+	outline: none;
+	font-family: $sans;
+	font-size: 1.25rem;
+	letter-spacing: -0.003em;
+	text-transform: capitalize;
+	border: none;
+	text-decoration: none;
+	color: $primary;
+	background-color: #fff;
+	cursor: pointer;
 }

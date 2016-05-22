@@ -1,9 +1,7 @@
 <div class="navigation">
-    <ul class="unstyle navigation-links">
+    <ul class="navigation-links">
 		{% for post in site.posts %}
-            <li class="navigation-item"><a data-scroll href="{{ site.baseurl }}{{ site.url }}/#{{ post.title | downcase | replace: ' ', '-' | remove: '.'| url_encode }}">{{ post.title }}</a></li>
-
-            <span id="{% if page.url == node.url %}active{% endif %}"></span>
+            <li class="navigation-item"><a data-scroll href="{{ site.baseurl }}{{ site.url }}/#{{ post.url | remove: '/' }}">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
 </div>

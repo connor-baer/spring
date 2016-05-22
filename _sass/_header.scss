@@ -10,9 +10,19 @@ header {
   font-size: 5rem;
   font-family: $ornamental;
   font-weight: normal;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   line-height: 1.25;
   text-align: center;
+  letter-spacing: 0.1rem;
+  &:after {
+    content: '';
+    height: 0.4rem;
+    width: 7rem;
+    background-color: $gray-5;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 0.2rem;
+  }
 }
 
 @media (min-width: $tablet) {

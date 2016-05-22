@@ -6,9 +6,26 @@
 	height: 100%;
 }
 
+.post-header {
+	margin-bottom: 1.5rem;
+	text-align: center;
+	font-family: $ornamental;
+}
+
 .post-title {
-	margin-top: 4rem;
-	margin-bottom: 2rem;
+	text-align: center;
+	font-family: $ornamental;
+	margin-bottom: 1.75rem;
+	letter-spacing: 0.1rem;
+	&:after {
+	    content: '';
+	    height: 0.4rem;
+	    width: 7rem;
+	    background-color: $gray-5;
+	    display: block;
+	    margin: 1.75rem auto;
+	    border-radius: 0.2rem;
+	}
 }
 
 .post-image {
@@ -52,6 +69,8 @@
 .post a, a.link {
   position: relative;
   display: inline-block;
+  color: $gray-90;
+  transition: color 0.15s ease-in-out;
   &:before {
     content: "";
     position: absolute;
@@ -60,19 +79,12 @@
     bottom: 0;
     left: 0;
     background-color: $primary;
-    visibility: hidden;
-    transform: translate(0px,3px);
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
+    transform: translate(0px,-5px);
   }
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
   	color: $primary;
-  }
-  &:hover:before,
-  &:hover:focus {
-  	visibility: visible;
-    opacity: 1;
-    transform: translate(0px,0);
   }
   strong {
     color: inherit;
