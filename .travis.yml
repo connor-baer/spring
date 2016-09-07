@@ -43,9 +43,9 @@ script:
     # Run the website through htmlproofer.
     - bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html
     # Run the website through JSHint.
-    - jshint ./_js
+    - jshint ./assets
     # Run the website through JavaScript Code Style checker.
-    - jscs ./_js
+    - jscs ./assets
 
 env:
     global:
