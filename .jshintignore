@@ -1,5 +1,5 @@
 # Ignore minified files
-assets/**.js
+assets/**.min.js
 
 # Ignore gulp configuration
 gulpconfig.js
