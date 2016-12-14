@@ -5,7 +5,6 @@ highlighter:          rouge
 
 # Gems
 gems:
-  - jekyll-sitemap
   - jekyll-feed
   - jekyll-gist
   - jekyll-redirect-from
@@ -13,7 +12,7 @@ gems:
 
 
 # Settings
-color:                
+color:
   primary:            '#11DD88'
   primary-darker:     '#0EBE75'
   primary-lighter:    '#2EEF9F'
@@ -30,7 +29,7 @@ title:                It's Spring!
 tagline:              'A one-page, two-column Jekyll theme.'
 keywords:             'connor, baer, bear, designer, developer, traveller, design, code, jekyll, wordpress, craft, cms, squarespace, for hire, spring'
 description:          'A one-page, two-column Jekyll theme that pairs beautifully styled content with contextual media.'
-url:                  http://spring.connorbaer.io
+url:                  http://spring.madebyconnor.co
 baseurl:              ''
 logo:                 /assets/apple-icon-144x144.png
 twitter:
@@ -38,7 +37,7 @@ twitter:
 facebook:
   app_id:             169140053203395
 
-google_analytics_key: UA-37412525-4 
+google_analytics_key: UA-37412525-4
 google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
 
 author:
@@ -49,7 +48,7 @@ author:
 
 social:
   name:               Connor Bär
-  links:              
+  links:
     - https://twitter.com/connor_baer
     - https://instagram.com/connor_baer
     - https://github.com/connor-baer

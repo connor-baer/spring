@@ -1,4 +1,4 @@
-# Travis CI (MIT License) configuration file for http://spring.connorbaer.io.
+# Travis CI (MIT License) configuration file for http://spring.madebyconnor.co.
 # @link https://travis-ci.org/
 
 # Ditch sudo and use containers.
@@ -7,27 +7,35 @@
 sudo: false
 
 # Declare project language.
-# @link http://about.travis-ci.org/docs/user/languages/php/
+# @link http://about.travis-ci.org/docs/user/languages/ruby/
 language: ruby
 
 # Declare versions of Ruby to use. Use one decimal max.
 # @link http://docs.travis-ci.com/user/build-configuration/
-rvm:
-    - 2.3.1
+matrix:
+    fast_finish: true
 
-gemfile:
-    - gemfile
+    include:
+        - rvm: '2.3.1'
+          gemfile: gemfile
+          env: SNIFF=1
+        - rvm: 'ruby-head'
+          gemfile: gemfile
+          env: SNIFF=2
+
+    allow_failures:
+        - rvm: 'ruby-head'
 
 # Use this to prepare your build for testing.
 # e.g. copy database configurations, environment variables, etc.
 # Failures in this section will result in build status 'errored'.
 before_script:
-    # Install JSCS: JavaScript Code Style checker.
-    # @link http://jscs.info/
-    - npm install -g jscs
     # Install JSHint, a JavaScript Code Quality Tool.
     # @link http://jshint.com/docs/
-    - npm install -g jshint
+    - if [[ "$SNIFF" == "1" ]]; then npm install -g jshint; fi
+    # Install JSCS: JavaScript Code Style checker.
+    # @link http://jscs.info/
+    - if [[ "$SNIFF" == "2" ]]; then npm install -g jscs; fi
 
 # Run test script commands.
 # Default is specific to project language.
@@ -35,26 +43,21 @@ before_script:
 
 # Assume bundler is being used, therefore
 # the `install` step will run `bundle install` by default.
-script: 
+script:
     #!/usr/bin/env bash
 
     # Build the website.
     - bundle exec jekyll build
-    # Run the website through htmlproofer.
-    - bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html
     # Run the website through JSHint.
-    - jshint ./assets
+    - if [[ "$SNIFF" == "1" ]]; then jshint .; fi
     # Run the website through JavaScript Code Style checker.
-    - jscs ./assets
-
-env:
-    global:
-        # speeds up installation of html-proofer
-        - NOKOGIRI_USE_SYSTEM_LIBRARIES=true 
+    - if [[ "$SNIFF" == "2" ]]; then jscs .; fi
+    # Run the website through htmlproofer.
+    - if [[ "$SNIFF" == "2" ]]; then bundle exec htmlproofer ./_site --check-favicon --check-html; fi
 
 # Receive notifications for build results.
 # @link http://docs.travis-ci.com/user/notifications/#Email-notifications
 notifications:
-    email: 
+    email:
         email:
             - admin@connorbaer.io
