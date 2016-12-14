@@ -51,7 +51,7 @@ social:
   links:
     - https://twitter.com/connor_baer
     - https://instagram.com/connor_baer
-    - https://github.com/connor-baer
+    - https://github.com/madebyconnor
     - https://medium.com/@connor_baer
     - https://www.snapchat.com/add/connor_baer
 
@@ -59,9 +59,9 @@ social:
 nav_items:
   Medium:             https://medium.com/@connor_baer
   Twitter:            https://twitter.com/connor_baer
-  Github:             https://github.com/connor-baer
+  Github:             https://github.com/madebyconnor
 
 version:              3.0.0
 
 github:
-  repo:               https://github.com/connor-baer/spring
+  repo:               https://github.com/madebyconnor/spring

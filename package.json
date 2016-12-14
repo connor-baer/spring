@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/connor-baer/spring.git"
+    "url": "git+https://github.com/madebyconnor/spring.git"
   },
   "keywords": [
     "connor",
@@ -23,7 +23,7 @@
   "author": "Connor Bär",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/connor-baer/spring/issues"
+    "url": "https://github.com/madebyconnor/spring/issues"
   },
   "homepage": "http://spring.madebyconnor.co",
   "devDependencies": {
