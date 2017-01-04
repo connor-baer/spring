@@ -1,0 +1,386 @@
+// ==== PHYSALIS ==== //
+
+// Override theme specific elements here.
+
+// 1. Metabar
+// 2. Hero
+// 3. Content
+
+
+// 1. Metabar //
+
+// ==== SIDEBAR ==== //
+
+// Style the content containers and sidebar content here.
+
+// 1. Containers
+// 2. Sidebar
+
+
+// 1. Containers //
+
+$sidebar-width: 50vw;
+
+.recipe-hasSidebar > div {
+  @include mappy-query(tablet) {
+    padding-right: $sidebar-width;
+  }
+}
+
+
+.recipe-hasBackground {
+  @include mappy-query(phone) {
+    .metabar-logo svg {
+      fill: white;
+    }
+
+    .metabar-title {
+      color: white;
+      text-shadow: 0 0 3px rgba(0, 0, 0, .33);
+
+      &:hover,
+      &:focus {
+        color: palette($primary);
+      }
+    }
+
+    .nav-link a {
+      @include mappy-query(tablet) {
+        color: white;
+        text-shadow: 0 0 3px rgba(0, 0, 0, .33);
+
+        &:hover,
+        &:focus {
+          color: palette($primary);
+        }
+      }
+    }
+
+    .nav-open {
+      color: white;
+      text-shadow: 0 0 3px rgba(0, 0, 0, .33);
+    }
+  }
+}
+
+
+// 2. Hero //
+
+.hero {
+  position: relative;
+}
+
+.hero-background,
+.hero-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+
+  .recipe & {
+    @include mappy-query(tablet) {
+      display: none;
+    }
+  }
+}
+
+.hero-background {
+  background-color: palette($primary);
+  z-index: 9;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, .33);
+  z-index: 99;
+}
+
+.entry-hasBackground {
+  .hero {
+    z-index: 999;
+
+    .hero-title,
+    .meta-text {
+      color: white;
+      text-shadow: 0 0 3px rgba(0, 0, 0, .33);
+    }
+
+    .meta-svg {
+      fill: white;
+    }
+  }
+}
+
+.recipe-hasBackground {
+  @include mappy-query(phone) {
+    .hero {
+      z-index: 999;
+
+      .hero-title,
+      .meta-text {
+        color: white;
+        text-shadow: 0 0 3px rgba(0, 0, 0, .33);
+      }
+
+      .meta-svg {
+        fill: white;
+      }
+    }
+  }
+}
+
+
+// 3. Content //
+
+.recipe {
+  .metabar-wrapper,
+  .content,
+  .footer-container {
+    @include mappy-query(desktop) {
+      max-width: $container-width * 0.7;
+    }
+  }
+}
+
+.content-style.content-recipe {
+  color: palette(gray, dark);
+
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p,
+  > ol,
+  > ul,
+  > hr,
+  > div:not(.sidebar):not(.full) {
+    @include mappy-query(tablet) {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 0;
+      float: none;
+    }
+  }
+
+  > ul {
+    padding-left: 1rem;
+  }
+
+  > ol {
+    margin: 0;
+    padding-left: 2rem;
+    list-style: none;
+
+    &::after {
+      display: none;
+    }
+
+    &:first-of-type {
+      counter-reset: steps;
+    }
+
+
+    li {
+      position: relative;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      &::before {
+        @include font(title);
+
+        position: absolute;
+        top: 0;
+        left: -2rem;
+        color: palette(gray, darker);
+        line-height: 1.25;
+        content: counter(steps);
+        counter-increment: steps;
+      }
+    }
+  }
+
+  figure:not(.gallery-item) {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    clear: both;
+    text-align: left;
+  }
+
+  figcaption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    color: white;
+    font-family: $macro;
+    line-height: 1.5;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .33);
+  }
+
+  .gallery {
+    @include clearfix;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .gallery-item {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    clear: none;
+    text-align: left;
+  }
+
+  .gallery-2 {
+    .gallery-item {
+      width: calc(50% - .125rem);
+    }
+
+    .gallery-item:first-child {
+      float: left;
+    }
+
+    .gallery-item:last-child {
+      float: right;
+    }
+  }
+
+  .gallery-3 {
+    @include mappy-bp(max-width medium) {
+      .gallery-item:first-child {
+        width: 100%;
+        margin-bottom: .25rem;
+      }
+
+      .gallery-item:nth-child(2),
+      .gallery-item:nth-child(3) {
+        width: calc(50% - .125rem);
+        float: right;
+      }
+
+      .gallery-item:nth-child(2) {
+        margin-right: .25rem;
+        float: left;
+      }
+    }
+
+    @include mappy-query(desktop) {
+      .gallery-item:first-child {
+        width: calc(67% - .125rem);
+        float: left;
+      }
+
+      .gallery-item:nth-child(2),
+      .gallery-item:nth-child(3) {
+        width: calc(33% - .125rem);
+        float: right;
+      }
+
+      .gallery-item:nth-child(2) {
+        margin-bottom: .25rem;
+      }
+    }
+  }
+
+  .gallery-4 {
+    .gallery-item {
+      width: calc(50% - .125rem);
+    }
+
+    .gallery-item:nth-child(even) {
+      float: right;
+    }
+
+    .gallery-item:nth-child(odd) {
+      float: left;
+    }
+
+    .gallery-item:first-child,
+    .gallery-item:nth-child(2) {
+      margin-bottom: .25rem;
+    }
+  }
+}
+
+
+.content-top {
+  position: relative;
+}
+
+
+
+
+.post {
+  padding-bottom: 4rem;
+  padding-top: 5rem;
+  position: relative;
+  border-bottom: 1px solid palette(gray, light);
+  height: 100%;
+}
+
+.post-header {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.post-title {
+  text-align: center;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.1rem;
+
+  &:after {
+    content: '';
+    height: 0.4rem;
+    width: 7rem;
+    background-color: palette(gray, light);
+    display: block;
+    margin: 1.75rem auto;
+    border-radius: 0.2rem;
+  }
+}
+
+.post-image {
+  height: 61.8vw;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+@include mappy-query(tablet) {
+  .post {
+  &.-fixed .post-image {
+    position: fixed;
+    bottom: 0;
+  }
+
+  &.-absolute-top .post-image {
+    position: absolute;
+    top: 0;
+  }
+
+  &.-absolute-bottom .post-image {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &.-first .post-image {
+    height: 100vh;
+    }
+  }
+
+  .post-image {
+    max-height: 100vh;
+    height: inherit;
+    width: 50vw;
+    left: 50vw;
+    margin-bottom: 0;
+  }
+}

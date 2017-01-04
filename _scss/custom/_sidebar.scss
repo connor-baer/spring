@@ -1,0 +1,125 @@
+// ==== SIDEBAR ==== //
+
+// Style the content containers and sidebar content here.
+
+// 1. Containers
+// 2. Sidebar
+
+
+// 1. Containers //
+
+$sidebar-width: 16rem;
+
+.recipe-hasSidebar > div {
+  @include mappy-query(tablet) {
+    padding-right: $sidebar-width;
+  }
+}
+
+.sidebar {
+  @include mappy-query(tablet) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: $sidebar-width;
+    z-index: 1000;
+  }
+}
+
+
+// 2. Sidebar //
+
+.sidebar-background,
+.sidebar-overlay {
+  display: none;
+
+  .recipe & {
+    @include mappy-query(tablet) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+.sidebar-background {
+  background-color: palette($primary);
+  z-index: 9;
+}
+
+.sidebar-overlay {
+  background-color: rgba(0, 0, 0, .33);
+  z-index: 99;
+}
+
+.sidebar-wrapper {
+  width: 100%;
+  padding: 2rem 2rem 0;
+  z-index: 999;
+
+  @include mappy-query(tablet) {
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;
+    padding: 2rem;
+    color: white;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .33);
+    overflow-y: scroll;
+  }
+}
+
+.sidebar-headline {
+  @include font(header2);
+
+  display: block;
+  clear: both;
+}
+
+.sidebar-label {
+  font-weight: $macro-semibold;
+
+  .sidebar-input {
+    display: none;
+  }
+}
+
+.sidebar-checkbox {
+  display: inline-block;
+  width: 1.25rem;
+  height: 100%;
+
+  svg {
+    width: 100%;
+    height: 1.25rem;
+    vertical-align: middle;
+    fill: palette(gray, darker);
+
+    @include mappy-query(tablet) {
+      fill: white;
+    }
+  }
+
+  .checked {
+    display: none;
+  }
+
+  .unchecked {
+    display: block;
+  }
+}
+
+.sidebar-input[type=checkbox]:checked + .sidebar-checkbox {
+  .checked {
+    display: block;
+  }
+
+  .unchecked {
+    display: none;
+  }
+}

@@ -1,0 +1,25 @@
+<aside class="sidebar" id="js-sidebar">
+  <div class="sidebar-background" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )"></div>
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-wrapper">
+    <h1 class="sidebar-headline">Ingredients</h1>
+    <form class="sidebar-ingredients">
+      {% for i in page.ingredients %}
+        <div class="sidebar-ingredient">
+          <label class="sidebar-label" for="{{ i.name }}">
+            <input class="sidebar-input" id="{{ i.name }}" type="checkbox" name="{{ i.name }}" value="{{ i.name }}">
+            <span class="sidebar-checkbox">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path class="unchecked" d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+                <path class="checked" d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </span>
+            <span class="sidebar-amount">{{ i.amount }}</span>
+            <span class="sidebar-unit">{{ i.unit }} </span>
+            <span class="sidebar-name">{{ i.name }}</span>
+          </label>
+        </div>
+      {% endfor %}
+    </form>
+  </div>
+</aside>

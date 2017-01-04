@@ -1,0 +1,49 @@
+---
+layout: default
+lang: en
+ref: index
+image: true
+exclude: true
+---
+
+<article class="index recipe-hasSidebar{% if page.image %} entry-hasBackground{% endif %}">
+  <div class="content-top">
+    {% include core/metabar.html %}
+
+    {% if page.image %}
+      <div class="hero-background" style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg'); background-image: -webkit-image-set( url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}.jpg') 1x, url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}{{ page.ref }}-large.jpg') 2x )"></div>
+      <div class="hero-overlay"></div>
+    {% endif %}
+
+    <header class="content hero">
+      <a id="{{ page.title | url_encode }}"><h1 class="hero-title">{{ page.title }}</h1></a>
+      {% include custom/meta.html %}
+    </header>
+  </div>
+
+  <div class="content-bottom">
+    <div class="content content-recipe content-style">
+
+    {% for post in site.posts %}
+    {% assign length = site.posts.size %}
+    {% assign lengthID = site.posts.size | plus: 1%}
+      <div id="js-{{ forloop.index }}" class="post -fixed{% if forloop.index == 1 %} -first{% endif %}{% if forloop.index == length %} -last{% endif %}">
+        <span id="{{ post.url | remove: '/' }}">
+        {% if forloop.index != 1 %}
+          <div class="post-header ctnr-golden">
+            <h1 class="post-title">{{ post.title }}</h1>
+          </div>
+        {% endif %}
+        </span>
+        <img class="post-image" style="z-index: {{ lengthID | minus: forloop.index }}" src="{{ site.baseurl }}/assets/images/{{post.image}}.jpg" srcset="{{ site.baseurl }}/assets/images/{{post.image}}.jpg 900w, {{ site.baseurl }}/assets/images/{{post.image}}-large.jpg 1500w, {{ site.baseurl }}/assets/images/{{post.image}}-small.jpg 600w" sizes="(min-width: 768px) 50vw, 100vw">
+        <div class="ctnr-wide">
+        {{ post.content }}
+        </div>
+      </div>
+    {% endfor %}
+
+    </div>
+
+    {% include core/footer.html %}
+  </div>
+</article>
