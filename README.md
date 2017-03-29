@@ -2,4 +2,6 @@
 
 # Spring
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/madebyconnor/spring.svg)](https://greenkeeper.io/)
+
 A one-page, two-column Jekyll theme that pairs beautifully styled content with contextual media.
