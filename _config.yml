@@ -41,7 +41,7 @@ tagline: 'A one-page, two-column Jekyll theme.'
 keywords: 'connor, baer, bear, designer, developer, design, code, jekyll, spring'
 description: 'A one-page, two-column Jekyll theme that pairs beautifully styled content with contextual media.'
 url: https://connor-baer.github.io
-baseurl: ''
+baseurl: '/spring'
 assets: '/assets'
 images: '/images'
 logo: /ass/ets/apple-icon-144x144.png
