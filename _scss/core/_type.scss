@@ -83,13 +83,13 @@ h5 {
 
 h1 {
   font-size: 2.606rem;
-  color: $primary;
+  color: palette($primary);
   font-weight: $sans-bold;
 }
 
 h2 {
   font-size: 2.085rem;
-  color: $primary;
+  color: palette($primary);
   font-weight: $sans-normal;
 }
 
@@ -137,11 +137,11 @@ p {
 
 .caps::before {
   float: left;
-  color: $primary;
-  font-size: 4.4rem;
+  color: palette($primary);
+  font-size: 4.15rem;
+  font-family: $display;
   line-height: 1;
-  padding: 0 0.5rem 0 0.25rem;
-  font-family: $serif;
+  padding-right: 0.5rem;
   content: attr(alt);
 }
 
@@ -149,7 +149,8 @@ a {
   border: 0;
   color: inherit;
   text-decoration: none;
-  color: $primary;
+  color: palette($primary);
+  transition: all 0.15s ease-in-out;
 }
 
 strong,

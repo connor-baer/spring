@@ -8,8 +8,8 @@
 
 // 1. Base colors //
 
-$primary: $oc-green-5 !default;
-$secondary: $oc-orange-5 !default;
+$primary: green !default;
+$secondary: orange !default;
 
 $black: #000;
 $white: #fff;
@@ -92,10 +92,10 @@ $_palettes: (
     darker: $oc-teal-9
   ),
   green: (
-    lighter: $oc-green-2,
-    light: $oc-green-4,
-    base: $oc-green-6,
-    dark: $oc-green-8,
+    lighter: $oc-green-1,
+    light: $oc-green-3,
+    base: $oc-green-5,
+    dark: $oc-green-7,
     darker: $oc-green-9
   ),
   lime: (
