@@ -6,7 +6,7 @@ A one-page, two-column [Jekyll](http://jekyllrb.com) theme that pairs beautifull
 
 > ⚠️ This theme should work as-is, but is no longer actively maintained. [Contributions](#contributing) are welcome!
 
-[![Spring screenshot](https://github.com/connor-baer/spring/blob/gh-pages/_images/screenshot.png)](https://connor-baer.github.io/spring)
+[![Spring screenshot](https://github.com/connor-baer/spring/blob/master/_images/screenshot.jpg)](https://connor-baer.github.io/spring)
 
 ## Usage
 
