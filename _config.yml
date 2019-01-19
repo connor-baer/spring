@@ -10,11 +10,6 @@ plugins:
   - jekyll-seo-tag
 
 # Settings
-color:
-  primary: '#11DD88'
-  primary-darker: '#0EBE75'
-  primary-lighter: '#2EEF9F'
-  primary-lighterer: '#54F2B0'
 exclude:
   [
     CNAME,
@@ -34,10 +29,11 @@ exclude:
     lint-staged.config.js,
     prettier.config.js,
   ]
-sass:
-  sass_dir: _sass
-  style: compressed
 permalink: /:title/
+compress_html:
+  clippings: all
+  comments: all
+dark_theme: false
 
 # Site meta
 title: It's Spring!
@@ -45,7 +41,7 @@ tagline: 'A one-page, two-column Jekyll theme.'
 keywords: 'connor, baer, bear, designer, developer, design, code, jekyll, spring'
 description: 'A one-page, two-column Jekyll theme that pairs beautifully styled content with contextual media.'
 url: https://connor-baer.github.io/autumn/
-baseurl: ''
+baseurl: '/spring'
 assets: '/assets'
 images: '/images'
 logo: /ass/ets/apple-icon-144x144.png
@@ -64,20 +60,31 @@ author:
   twitter: connor_baer
 
 social:
-  name: Connor Bär
-  links:
-    - https://twitter.com/connor_baer
-    - https://instagram.com/connor_baer
-    - https://github.com/madebyconnor
-    - https://medium.com/@connor_baer
+  twitter: https://twitter.com/connor_baer
+  instagram: https://instagram.com/connor_baer
+  github: https://github.com/connor-baer/autumn
+  medium: https://medium.com/@connor_baer
 
-## Outputs the social links in the navigation. Re-arrange to change order.
-nav_items:
-  Medium: https://medium.com/@connor_baer
-  Twitter: https://twitter.com/connor_baer
-  Github: https://github.com/madebyconnor
-
-version: 3.0.0
+version: 4.0.0
 
 github:
   repo: https://github.com/connor-baer/spring
+
+# Integrations
+# typekit:              fcv7rfe
+
+google_fonts:
+  PT Sans: 400, 700
+  PT Serif: 400, 700
+  Playfair Display: 400
+
+google_analytics_key: UA-94021817-2
+# google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
+
+# Content
+excerpt_separator: <!-- Read more -->
+
+navigation:
+  Medium: https://medium.com/@connor_baer
+  Twitter: https://twitter.com/connor_baer
+  Github: https://github.com/connor-baer

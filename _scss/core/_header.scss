@@ -1,0 +1,30 @@
+header {
+  background-color: $white;
+}
+
+.header-content {
+  padding: 5rem 0 0;
+
+  @media (min-width: $tablet) {
+    padding: 11rem 0 3rem;
+  }
+}
+
+.header-title {
+  font-size: 4rem;
+  font-family: $display;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  line-height: 1.25;
+  text-align: center;
+
+  &:after {
+    content: '';
+    height: 0.4rem;
+    width: 7rem;
+    background-color: palette(gray, lighter);
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 0.2rem;
+  }
+}

@@ -1,0 +1,72 @@
+.footer {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  width: 100%;
+  background-color: $white;
+  border-top: 1px solid palette(gray, lighter);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99999999;
+  transition: transform 0.2s ease-in-out;
+
+  & p {
+    font-family: $sans;
+    margin-bottom: 0;
+    font-weight: $sans-normal;
+  }
+}
+
+.footer-left {
+  float: left;
+}
+
+.footer-text {
+  color: palette(gray);
+}
+
+.footer-right {
+  float: right;
+}
+
+.footer-button {
+  color: $primary;
+  cursor: pointer;
+}
+
+.share {
+  position: fixed;
+  visibility: hidden;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 999999999;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  &.-show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+
+.share-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.75rem;
+  font-size: 2rem;
+}
+
+.share-content {
+  vertical-align: middle;
+}
+
+@media (min-width: $tablet) {
+  .footer {
+    max-width: 50vw;
+  }
+}

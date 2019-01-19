@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
 
-  {% include head.html %}
-
-	<body>
-		<div class="site-wrapper">
-			<div class="body-wrapper">
-				<header>
-			    	{% include social.html %}
-			    	{% include header.html %}
-			    </header>
-			    <article>
-					{{ content }}
-				</article>
-				<nav>
-					{% include navigation.html %}
-				</nav>
-				<footer>
-					{% include footer.html %}
-				</footer>
-			</div>
-	    </div>
-	    {% include scripts.html %}
-	</body>
-</html>
+<header>
+	{% include social.html %}
+	{% include header.html %}
+</header>
+<article>
+	{{ content }}
+</article>
+<nav>
+	{% include navigation.html %}
+</nav>

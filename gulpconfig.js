@@ -143,7 +143,7 @@ module.exports = {
       src: [`${src}_images/**/*(*.png|*.jpg|*.jpeg|*.gif|*.svg)`],
       responsive: {
         // Convert all images to JPEG format.
-        '*': [
+        'posts/*': [
           {
             // post.jpg is 1000 pixels wide.
             width: 1000,
@@ -189,7 +189,7 @@ module.exports = {
       appDescription: pkg.description,
       developerName: pkg.author,
       background: '#ffffff',
-      theme_color: '#f9423a',
+      theme_color: '#51cf66',
       path: `${src + assets}icons/`,
       url: pkg.homepage,
       display: 'standalone',
