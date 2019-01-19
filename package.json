@@ -4,11 +4,11 @@
   "description": "A one-page, two-column Jekyll theme that pairs beautifully styled content with contextual media.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp default"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madebyconnor/spring.git"
+    "url": "git+https://github.com/connor-baer/spring.git"
   },
   "keywords": [
     "connor",
@@ -23,9 +23,9 @@
   "author": "Connor Bär",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/madebyconnor/spring/issues"
+    "url": "https://github.com/connor-baer/spring/issues"
   },
-  "homepage": "http://spring.madebyconnor.co",
+  "homepage": "https://connor-baer.github.io/spring/",
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
