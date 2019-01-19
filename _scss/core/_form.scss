@@ -20,7 +20,7 @@ textarea {
   transition: border 0.15s ease-in-out;
   &:focus,
   &:active {
-    border: 1px solid $primary;
+    border: 1px solid palette($primary);
   }
 }
 
@@ -39,7 +39,7 @@ button.button {
   text-decoration: none;
   letter-spacing: 0.1rem;
   padding: 0.75rem 1.75rem;
-  border: 3px solid $primary;
+  border: 3px solid palette($primary);
   color: palette(gray, darker);
   background-color: #fff;
   transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
@@ -47,7 +47,7 @@ button.button {
   &:focus,
   &:active {
     color: #fff;
-    background-color: $primary;
+    background-color: palette($primary);
     cursor: pointer;
   }
 }
@@ -63,7 +63,7 @@ a.button-text {
   text-transform: capitalize;
   border: none;
   text-decoration: none;
-  color: $primary;
+  color: palette($primary);
   background-color: #fff;
   cursor: pointer;
 }

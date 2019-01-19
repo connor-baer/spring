@@ -3,12 +3,7 @@
   padding-bottom: 0.3rem;
   width: 100%;
   background-color: $white;
-  border-top: 1px solid palette(gray, lighter);
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: 99999999;
-  transition: transform 0.2s ease-in-out;
+  border-top: 1px solid palette(gray, light);
 
   & p {
     font-family: $sans;
@@ -17,52 +12,57 @@
   }
 }
 
-.footer-left {
-  float: left;
+.footer-navigation { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.footer-text {
-  color: palette(gray);
+.footer-links {
+  display: block;
+  width: calc(50% - 1rem);
 }
 
-.footer-right {
-  float: right;
+.footer-title {
+  font-family: $display;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
-.footer-button {
-  color: $primary;
-  cursor: pointer;
-}
+.footer-link a {
+  display: inline-block;
+  padding-top: 0.25rem;
+  color: palette(gray, dark);
+  border-bottom: 1px solid transparent;
 
-.share {
-  position: fixed;
-  visibility: hidden;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 999999999;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-  &.-show {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out;
+  &:hover,
+  &:focus {
+    color: palette($primary);
+    border-bottom: 1px solid currentColor;
   }
 }
 
-.share-close {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.75rem;
-  font-size: 2rem;
+.footer-text {
+  font-family: $sans;
+  font-style: normal;
+  font-weight: $sans-normal;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: palette(gray);
+
+  a {
+    color: palette(gray);
+    border-bottom: 1px solid currentColor;
+
+    &:hover,
+    &:focus {
+      color: palette($primary);
+    }
+  }
 }
 
-.share-content {
-  vertical-align: middle;
+.nav-link {
+  color: palette(gray);
 }
 
 @media (min-width: $tablet) {

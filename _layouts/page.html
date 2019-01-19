@@ -3,15 +3,14 @@ layout: default
 ---
 
 <header>
-  {% include social.html %}
-  {% include header.html %}
+  {% include core/social.html %}
+  {% include core/header.html %}
 </header>
 <article>
   {{ content }}
 </article>
 <nav>
-	{% include navigation.html %}
+	{% include core/navigation.html %}
 </nav>
-<footer>
-	{% include footer.html %}
-</footer>
+
+{% include core/footer.html %}

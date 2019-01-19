@@ -1,0 +1,9 @@
+<div class="navigation">
+  <ul class="navigation-links">
+    {% for post in site.posts %}
+    <li class="navigation-item">
+      <a data-scroll href="#{{ post.url | remove: '/' }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

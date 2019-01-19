@@ -61,6 +61,9 @@ function getPosition(el) {
 }
 
 function scrollImage(els) {
+  if (els.length <= 0) {
+    return;
+  }
   const viewport = document.documentElement.clientHeight;
   const first = els[0];
   const last = els[els.length - 1];

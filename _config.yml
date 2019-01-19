@@ -40,8 +40,8 @@ title: It's Spring!
 tagline: 'A one-page, two-column Jekyll theme.'
 keywords: 'connor, baer, bear, designer, developer, design, code, jekyll, spring'
 description: 'A one-page, two-column Jekyll theme that pairs beautifully styled content with contextual media.'
-url: https://connor-baer.github.io/autumn/
-baseurl: '/spring'
+url: https://connor-baer.github.io
+baseurl: ''
 assets: '/assets'
 images: '/images'
 logo: /ass/ets/apple-icon-144x144.png
@@ -62,7 +62,7 @@ author:
 social:
   twitter: https://twitter.com/connor_baer
   instagram: https://instagram.com/connor_baer
-  github: https://github.com/connor-baer/autumn
+  github: https://github.com/connor-baer/spring
   medium: https://medium.com/@connor_baer
 
 version: 4.0.0

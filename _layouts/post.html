@@ -3,19 +3,18 @@ layout: default
 ---
 
 <header>
-  {% include social.html %}
+  {% include core/social.html %}
 </header>
 <article>
-  <div id="js-1" class="post -fixed -first">
+  <div class="post -fixed -first">
     <div class="post-header ctnr-golden">
       <h1 class="post-title">{{ page.title }}</h1>
     </div>
-    <img class="post-image" style="z-index: {{ lengthID | minus: forloop.index }}" src="{{ site.baseurl }}{{ site.assets }}{{ site.images }}/{{page.image}}.jpeg" srcset="{{ site.baseurl }}{{ site.assets }}{{ site.images }}/{{page.image}}.jpeg 1000w, {{ site.baseurl }}{{ site.assets }}{{ site.images }}/{{page.image}}-large.jpeg 2000w, {{ site.baseurl }}{{ site.assets }}{{ site.images }}/{{page.image}}-small.jpeg 500w" sizes="(min-width: 768px) 50vw, 100vw">
+    <img class="post-image" style="z-index: {{ lengthID | minus: forloop.index }}" src="{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{page.image}}.jpeg" srcset="{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{page.image}}.jpeg 1000w, {{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{page.image}}-large.jpeg 2000w, {{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{page.image}}-small.jpeg 500w" sizes="(min-width: 768px) 50vw, 100vw">
     <div class="ctnr-wide">
       {{ content }}
     </div>
   </div>
 </article>
-<footer>
-	{% include footer.html %}
-</footer>
+
+{% include core/footer.html %}

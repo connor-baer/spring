@@ -2,6 +2,12 @@
   padding: 1.25rem 1.75rem;
   background-color: $white;
   width: 100%;
+
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 }
 
 .social-logo {
@@ -22,10 +28,11 @@
   width: 2.5rem;
   height: 2.5rem;
   transition: transform 0.15s ease-in-out, fill 0.15s ease-in-out;
-  fill: palette(gray);
+  fill: palette(gray, dark);
+
   &:hover,
   &:focus {
     transform: scale(1.25);
-    fill: $primary;
+    fill: palette($primary);
   }
 }
