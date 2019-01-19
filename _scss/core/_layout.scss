@@ -1,0 +1,57 @@
+// ==== LAYOUT ==== //
+
+// Define all global layouts and layout styles here.
+
+// 1. Breakpoints
+// 2. Helpers
+
+// 1. Breakpoints //
+
+$phone: 36em !default; /*576*/
+$tablet: 48em !default; /*768px*/
+$desktop: 64em !default; /*1024px*/
+
+// 1. Helpers //
+
+.site-wrapper {
+  background-color: palette(gray, lighter);
+  min-height: 100vh;
+  min-width: 100vw;
+  max-width: 90rem;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.body-wrapper {
+  background-color: palette(white);
+  min-height: 100vh;
+  width: 100vw;
+  z-index: 2;
+}
+
+.ctnr-wide,
+.ctnr-golden {
+  width: 100%;
+  max-width: 50rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet) {
+  .body-wrapper {
+    width: 50vw;
+  }
+
+  .ctnr-wide {
+    width: 100%;
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  .ctnr-golden {
+    max-width: 56rem;
+    width: 61.8%;
+    min-width: 24rem;
+  }
+}

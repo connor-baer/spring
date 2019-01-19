@@ -1,0 +1,230 @@
+// ==== TYPOGRAPHY ==== //
+
+// Define all global font styles here.
+
+// 1. Variables
+// 2. Global styles
+
+// 1. Variables //
+
+$sans: 'PT Sans', Helvetica, sans-serif !default;
+$sans-normal: 400 !default;
+$sans-bold: 700 !default;
+
+$serif: 'PT Serif', 'Merriweather', serif !default;
+$serif-normal: 400 !default;
+$serif-bold: 700 !default;
+
+$display: 'Playfair Display', 'PT Serif', 'Merriweather', serif !default;
+$display-normal: 400 !default;
+
+$code: 'Courier New', Courier, monospace !default;
+
+// 2. Global styles //
+
+// Update the foundational and global aspects of the page here.
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: palette(gray, darker);
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  // Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/.
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+  color: palette(black);
+  background: palette(green, lighter);
+}
+::selection {
+  color: palette(black);
+  background: palette(green, lighter);
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: $white;
+  color: palette(gray, darker);
+  font-family: $sans;
+  font-weight: $sans-normal;
+  font-feature-settings: 'lnum', 'salt';
+  overflow-x: hidden;
+
+  &.serif {
+    font-family: $serif;
+    font-weight: $serif-normal;
+  }
+}
+
+// Limits width on large screens and centers content.
+.site {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  font-family: $sans;
+}
+
+h1 {
+  font-size: 2.606rem;
+  color: $primary;
+  font-weight: $sans-bold;
+}
+
+h2 {
+  font-size: 2.085rem;
+  color: $primary;
+  font-weight: $sans-normal;
+}
+
+h3 {
+  font-size: 1.805rem;
+  color: palette(gray, darker);
+  font-weight: $sans-bold;
+}
+
+h4 {
+  font-size: 1.444rem;
+  color: palette(gray, darker);
+  font-weight: $sans-normal;
+}
+
+h5 {
+  font-size: 1.25rem;
+  text-align: center;
+  color: palette(gray, dark);
+  line-height: 1.5;
+  font-weight: $sans-bold;
+}
+
+h6 {
+  font-size: 1rem;
+  text-align: center;
+  color: palette(gray);
+  line-height: 1.5;
+  font-family: $serif;
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: $serif-bold;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: $serif;
+  font-size: 1.25rem;
+  line-height: 1.75;
+  letter-spacing: -0.003em;
+  font-weight: $serif-normal;
+}
+
+.caps::before {
+  float: left;
+  color: $primary;
+  font-size: 4.4rem;
+  line-height: 1;
+  padding: 0 0.5rem 0 0.25rem;
+  font-family: $serif;
+  content: attr(alt);
+}
+
+a {
+  border: 0;
+  color: inherit;
+  text-decoration: none;
+  color: $primary;
+}
+
+strong,
+.strong {
+  font-weight: $sans-bold;
+
+  .serif & {
+    font-weight: $serif-bold;
+  }
+}
+
+dfn,
+i,
+em,
+.em {
+  font-style: italic;
+}
+
+code,
+kbd,
+tt,
+var,
+samp,
+pre {
+  font-family: $code;
+}
+
+pre {
+  max-width: 100%;
+  margin: 0 0 1.75em;
+  padding: 1.75em;
+  border: 1px solid palette(gray, light);
+  font-size: 1rem;
+  line-height: 1.3125;
+  white-space: pre-wrap;
+  overflow: auto;
+  word-wrap: break-word;
+}
+
+code {
+  padding: 0.125em 0.25em;
+  background-color: palette(gray, light);
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted palette(gray, light);
+  cursor: help;
+}
+
+mark {
+  padding: 0.125em 0.25em;
+  background: palette(orange, light);
+  color: #fff;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  box-sizing: border-box;
+
+  &::before {
+    display: block;
+    height: 2px;
+    background-color: palette(gray, light);
+    content: '';
+  }
+}
+
+time {
+  display: inline-block;
+}
