@@ -4,7 +4,8 @@
   "description": "A one-page, two-column Jekyll theme that pairs beautifully styled content with contextual media.",
   "main": "index.html",
   "scripts": {
-    "start": "gulp default"
+    "start": "gulp default",
+    "lint": "foundry run eslint --fix \"**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "homepage": "https://connor-baer.github.io/spring/",
   "devDependencies": {
+    "@sumup/foundry": "^1.0.3",
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.1",
