@@ -2,8 +2,16 @@
 layout: default
 ---
 
-{% include navigation.html %}
-
-<article class="content">
+<header>
+  {% include social.html %}
+  {% include header.html %}
+</header>
+<article>
   {{ content }}
 </article>
+<nav>
+	{% include navigation.html %}
+</nav>
+<footer>
+	{% include footer.html %}
+</footer>

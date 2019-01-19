@@ -1,0 +1,31 @@
+.social {
+  padding: 1.25rem 1.75rem;
+  background-color: $white;
+  width: 100%;
+}
+
+.social-logo {
+  float: left;
+}
+
+.social-links {
+  float: right;
+}
+
+.social-icon {
+  padding: 0.6rem;
+  margin-left: 1.5rem;
+}
+
+.social-print,
+.social-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: transform 0.15s ease-in-out, fill 0.15s ease-in-out;
+  fill: palette(gray);
+  &:hover,
+  &:focus {
+    transform: scale(1.25);
+    fill: $primary;
+  }
+}
