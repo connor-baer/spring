@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'github-pages', '104'
-gem 'html-proofer'
+gem 'github-pages'
 gem 'jekyll-feed'
 gem 'jekyll-gist'
 gem 'jekyll-redirect-from'

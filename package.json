@@ -2,13 +2,14 @@
   "name": "spring",
   "version": "1.0.0",
   "description": "A one-page, two-column Jekyll theme that pairs beautifully styled content with contextual media.",
-  "main": "index.html",
+  "main": "site/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp default",
+    "lint": "foundry run eslint --fix \"_js/**/*.js\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madebyconnor/spring.git"
+    "url": "git+https://github.com/connor-baer/spring.git"
   },
   "keywords": [
     "connor",
@@ -23,18 +24,38 @@
   "author": "Connor Bär",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/madebyconnor/spring/issues"
+    "url": "https://github.com/connor-baer/spring/issues"
   },
-  "homepage": "http://spring.madebyconnor.co",
+  "homepage": "https://connor-baer.github.io/spring/",
+  "dependencies": {
+    "normalize.css": "^6.0.0",
+    "open-color": "^1.4.0",
+    "smooth-scroll": "github:cferdinandi/smooth-scroll"
+  },
   "devDependencies": {
-    "browser-sync": "^2.11.1",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@sumup/foundry": "^1.0.3",
+    "browser-sync": "^2.17.6",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
-    "gulp-jshint": "^2.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-changed": "^2.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-favicons": "^2.2.7",
+    "gulp-filter": "^5.0.0",
+    "gulp-load-plugins": "^1.2.4",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-shell": "^0.5.2",
+    "gulp-responsive": "^2.6.0",
+    "gulp-ruby-sass": "^2.1.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^2.0.0",
-    "gulp-watch": "^4.3.5",
-    "jshint": "^2.9.2"
+    "gulp-util": "^3.0.7",
+    "merge-stream": "^1.0.0",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.2.2"
   }
 }
