@@ -2,10 +2,10 @@
   "name": "spring",
   "version": "1.0.0",
   "description": "A one-page, two-column Jekyll theme that pairs beautifully styled content with contextual media.",
-  "main": "index.html",
+  "main": "site/index.html",
   "scripts": {
     "start": "gulp default",
-    "lint": "foundry run eslint --fix \"**/*.js\""
+    "lint": "foundry run eslint --fix \"_js/**/*.js\""
   },
   "repository": {
     "type": "git",
